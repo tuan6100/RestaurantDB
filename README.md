@@ -8,14 +8,17 @@
 
 <!-- Chen anh vao day -->
 <details>
-  <summary><b>Mục lục </b></summary>
+  <summary><b>Mục lục </b></summary> 
   
-  - [1. Giới thiệu để tài](#heading)
-  - [2. Danh sách thành viên](#heading-1)
+   1. Giới thiệu để tài
+   2. Danh sách thành viên
+   3. Xây dựng mô hình dữ liệu
+   4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH
+   5. Danh sách phụ thuộc hàm
 
 </details>
 
-## 1. Giới thiệu để tài
+# 1. Giới thiệu để tài
 
 Xuất phát từ nhu cầu chuyển đổi số, hệ thống mô hình dữ liệu quản lý nhà hàng
 được xây dựng nhằm mục đích ứng dụng công nghệ vào trong hoạt động lưu
@@ -34,7 +37,7 @@ trực tuyến khác. </li>
 </ol>
 
 
-## 2. Danh sách thành viên 
+# 2. Danh sách thành viên 
 
 | STT | Họ tên | MSSV | 
 | :-------- | :------- | :----------|
@@ -72,8 +75,10 @@ SELECT * FROM table WHERE x = y;
 ```
 Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
-3. Câu lệnh 2:
+2. Câu lệnh 2:
 
+<!--chèn code vào đây-->
 
+# 5. Danh sách phụ thuộc hàm
 
 
