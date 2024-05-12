@@ -10,8 +10,8 @@
 <details>
   <summary><b>Mục lục </b></summary>
   
-  - [1. Giới thiệu để tài](#h1)
-  - [2. Danh sách thành viên](#h2)
+  - [1. Giới thiệu để tài](#heading)
+  - [2. Danh sách thành viên](#heading-1)
 
 </details>
 
