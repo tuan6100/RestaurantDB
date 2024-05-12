@@ -7,8 +7,15 @@
 </div>
 
 <!-- Chen anh vao day -->
+<details>
+  <summary><b>Mục lục </b></summary>
+  
+  - [1. Giới thiệu để tài](#h1)
+  - [2. Danh sách thành viên](#h2)
 
-<h1>1. Giới thiệu để tài</h1>
+</details>
+
+# 1. Giới thiệu để tài
 
 Xuất phát từ nhu cầu chuyển đổi số, hệ thống mô hình dữ liệu quản lý nhà hàng
 được xây dựng nhằm mục đích ứng dụng công nghệ vào trong hoạt động lưu
@@ -26,7 +33,8 @@ qua việc lưu trữ thông tin mua hang, hóa đơn điện tử và nhiều d
 trực tuyến khác. </li>
 </ol>
 
-<h1>2. Danh sách thành viên</h1>
+
+# 2. Danh sách thành viên 
 
 | STT | Họ tên | MSSV | 
 | :-------- | :------- | :----------|
@@ -36,9 +44,9 @@ trực tuyến khác. </li>
 | 4 | Nguễn Huy Hoàng | 20226107 |
 | 5 | Đỗ Gia Huy | 20226085 |
 
-<h1>3. Xây dựng mô hình dữ liệu</h1>
+# 3. Xây dựng mô hình dữ liệu
 
-<h2>3.1. Mô hình thực thể - liên kết</h2>
+## 3.1. Mô hình thực thể - liên kết
 
 <!-- Chèn ảnh vào đây-->
 Danh sách thực thể:
@@ -52,17 +60,17 @@ Danh sách thực thể:
 </ul>
 
 
-<h2>3.2. Sơ đồ quan hệ </h2>
+## 3.2. Sơ đồ quan hệ 
 
 <!-- Chèn ảnh vào đây -->
 
-<h1>4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH </h1>
+# 4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH 
 
  1. Câu lệnh 1: 
-       ```sql
-       SELECT * FROM table WHERE x = y;
-       ```
-       Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+```sql
+SELECT * FROM table WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
 3. Câu lệnh 2:
 
