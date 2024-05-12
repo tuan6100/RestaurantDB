@@ -15,7 +15,7 @@
 
 </details>
 
-# 1. Giới thiệu để tài
+## 1. Giới thiệu để tài
 
 Xuất phát từ nhu cầu chuyển đổi số, hệ thống mô hình dữ liệu quản lý nhà hàng
 được xây dựng nhằm mục đích ứng dụng công nghệ vào trong hoạt động lưu
@@ -34,7 +34,7 @@ trực tuyến khác. </li>
 </ol>
 
 
-# 2. Danh sách thành viên 
+## 2. Danh sách thành viên 
 
 | STT | Họ tên | MSSV | 
 | :-------- | :------- | :----------|
