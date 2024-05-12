@@ -58,19 +58,14 @@ Danh sách thực thể:
 
 <h1>4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH </h1>
 
-<ol type='1'>
-   <li> Câu lệnh 1:
-     <p>
+ 1. Câu lệnh 1: 
        ```sql
        SELECT * FROM table WHERE x = y;
-       ```     
-       Biểu thức đại số quan hệ:
-       $\sigma_{x = y}(mytable)$
-     </p>
-   </li>
-  <li> Câu lệnh 2:
-  </li>
-</ol>
+       ```
+       Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+3. Câu lệnh 2:
+
 
 
 
