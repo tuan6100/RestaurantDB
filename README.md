@@ -7,6 +7,7 @@
 </div>
 
 <!-- Chen anh vao day -->
+
 <details>
   <summary><b>Mục lục </b></summary> 
   
@@ -71,14 +72,164 @@ Danh sách thực thể:
 
  1. Câu lệnh 1: 
 ```sql
-SELECT * FROM table WHERE x = y;
+SELECT * FROM mytable WHERE x = y;
 ```
 Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
-2. Câu lệnh 2:
+ 2. Câu lệnh 2: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
-<!--chèn code vào đây-->
+ 3. Câu lệnh 3: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 4. Câu lệnh 4: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 5. Câu lệnh 5: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 6. Câu lệnh 6: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 7. Câu lệnh 7: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 8. Câu lệnh 8: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 9. Câu lệnh 9: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 10. Câu lệnh 10: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 11. Câu lệnh 11: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 12. Câu lệnh 12: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 13. Câu lệnh 13: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 14. Câu lệnh 14: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 15. Câu lệnh 15: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 16. Câu lệnh 16: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 17. Câu lệnh 17: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 18. Câu lệnh 18: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 19. Câu lệnh 19: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 20. Câu lệnh 20: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 21. Câu lệnh 21: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 22. Câu lệnh 22: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 23. Câu lệnh 23: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 24. Câu lệnh 24: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 25. Câu lệnh 25: 
+```sql
+SELECT * FROM mytable WHERE x = y;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+> [!Note]  
+> Danh sách các câu truy vấn có mệnh đề **<span style="color:brown">GROUP BY</span>**: 1, 2, 3  
+> Danh sách các câu truy vấn có ánh xạ lồng: 4, 5
+
+
 
 # 5. Danh sách phụ thuộc hàm
 
+- Xét quan hệ ...
+  Có các phụ thuộc hàm: ... 
+
+- Xét quan hệ ...
 
