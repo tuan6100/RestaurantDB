@@ -223,7 +223,7 @@ SELECT * FROM mytable WHERE x = y;
 Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
 > [!Note]  
-> Danh sách các câu truy vấn có mệnh đề **<span style="color:#4da6ff">GROUP BY</span>**: 1, 2, 3  
+> Danh sách các câu truy vấn có mệnh đề <span style="color:#4da6ff">GROUP BY</span>: 1, 2, 3  
 > Danh sách các câu truy vấn có ánh xạ lồng: 4, 5
 
 
