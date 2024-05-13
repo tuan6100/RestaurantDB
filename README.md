@@ -9,17 +9,19 @@
 <!-- Chen anh vao day -->
 
 <details>
-  <summary><b>Mục lục </b></summary> 
+  <summary><b>Mục lục</b></summary> 
   
-   1. Giới thiệu để tài
-   2. Danh sách thành viên
-   3. Xây dựng mô hình dữ liệu
-   4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH
-   5. Danh sách phụ thuộc hàm
+   <ol>
+      <li><a href="#gioi-thieu-de-tai">Giới thiệu để tài</a></li>
+      <li><a href="#danh-sach-thanh-vien">Danh sách thành viên</a></li>
+      <li><a href="#xay-dung-mo-hinh-du-lieu">Xây dựng mô hình dữ liệu</a></li>
+      <li><a href="#danh-sach-cau-truy-van-sql-va-bieu-thuc-dsqh">Danh sách các câu truy vấn SQL và biểu thức ĐSQH</a></li>
+      <li><a href="#danh-sach-phu-thuoc-ham">Danh sách các phụ thuộc hàm</a></li>
+   </ol>
 
 </details>
 
-# 1. Giới thiệu để tài
+<h1 id="gioi-thieu-de-tai">1. Giới thiệu để tài</h1>
 
 Xuất phát từ nhu cầu chuyển đổi số, hệ thống mô hình dữ liệu quản lý nhà hàng
 được xây dựng nhằm mục đích ứng dụng công nghệ vào trong hoạt động lưu
@@ -38,7 +40,7 @@ trực tuyến khác. </li>
 </ol>
 
 
-# 2. Danh sách thành viên 
+<h2 id="danh-sach-thanh-vien">2. Danh sách thành viên</h2>
 
 | STT | Họ tên | MSSV | 
 | :-------- | :------- | :----------|
@@ -48,7 +50,7 @@ trực tuyến khác. </li>
 | 4 | Nguễn Huy Hoàng | 20226107 |
 | 5 | Đỗ Gia Huy | 20226085 |
 
-# 3. Xây dựng mô hình dữ liệu
+<h2 id="xay-dung-mo-hinh-du-lieu">3. Xây dựng mô hình dữ liệu</h2>
 
 ## 3.1. Mô hình thực thể - liên kết
 
@@ -68,7 +70,7 @@ Danh sách thực thể:
 
 <!-- Chèn ảnh vào đây -->
 
-# 4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH 
+<h2 id="danh-sach-cau-truy-van-sql-va-bieu-thuc-dsqh">4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH</h2>
 
  1. Câu lệnh 1: 
 ```sql
@@ -221,12 +223,11 @@ SELECT * FROM mytable WHERE x = y;
 Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
 > [!Note]  
-> Danh sách các câu truy vấn có mệnh đề **<span style="color:brown">GROUP BY</span>**: 1, 2, 3  
+> Danh sách các câu truy vấn có mệnh đề **<span style="color:#4da6ff">GROUP BY</span>**: 1, 2, 3  
 > Danh sách các câu truy vấn có ánh xạ lồng: 4, 5
 
 
-
-# 5. Danh sách phụ thuộc hàm
+<h2 id="danh-sach-phu-thuoc-ham">5. Danh sách các phụ thuộc hàm</h2>
 
 - Xét quan hệ ...
   Có các phụ thuộc hàm: ... 
