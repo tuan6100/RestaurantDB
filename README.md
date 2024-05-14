@@ -229,31 +229,31 @@ Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
 <h2 id="danh-sach-phu-thuoc-ham">5. Danh sách các phụ thuộc hàm</h2>
 
-- Xét lược đồ quan hệ Customer(Customer_id, Name, Email, Phone_number) \
+- Xét lược đồ quan hệ <span style="color:#ff00ff">Customer</span>(Customer_id, Name, Email, Phone_number) \
   Ký hiệu A = Customer_id, B = Name, C = Email, D = Phone_number \
   Lược đồ này có tập phụ thuộc hàm F = {f1, f2} trong đó:
   - f1 = A -> BCD
   - f2 = B -> CD
    
-- Xét lược đồ quan hệ Reservation(Reservation_id, Customer_id, Table_number, Time, Num_of_customer, Status) \
+- Xét lược đồ quan hệ <span style="color:#800080">Reservation</span>(Reservation_id, Customer_id, Table_number, Time, Num_of_customer, Status) \
   Ký hiệu A = Reservation_id, B = Customer_id, C = table_number, D = Time, E = Num_of_customer, F = Status \
   Lược đồ này có tập phụ thuộc hàm F = {f3, f4} trong đó:
   - f3 = A -> C
   - f4 = B -> DEF
  
-- Xét lược đồ quan hệ Inventory(Ingredient_ID, Name, Description, Catelogy, Current_quantity, Expiration) \
+- Xét lược đồ quan hệ <span style="color:#0000ff">Inventory</span>(Ingredient_ID, Name, Description, Catelogy, Current_quantity, Expiration) \
   Ký hiệu A = Ingredient_ID, B = Name, C = Description, D = Catelogy, E = Current_quantity, F = Expiration\
   Lược đồ này có tập phụ thuộc hàm F = {f5, f6} trong đó:
   - f5 = A -> BCDEF
   - f6 = B -> CDEF
 
-- Xét lược đồ quan hệ Foof_and_Beverage(f&b_id, name, catelogy, price) \
+- Xét lược đồ quan hệ <span style="color:#00ffff">Foof_and_Beverage</span>(f&b_id, name, catelogy, price) \
   Ký hiệu A = f&b_id, B = name, C = catelogy, D = price
   Lược đồ này có tập phụ thuộc hàm F = {f7, f8} trong đó:
   - f7 = A -> BCD
   - f8 = B -> CD
  
-- Xét lược đồ quan hệ Bill(Bill_id, Reservation_id, Date_and_time, Total_price) \
+- Xét lược đồ quan hệ <span style="color:#33ff99">Bill</span>(Bill_id, Reservation_id, Date_and_time, Total_price) \
   Ký hiệu A = Bill_id, B = Reservation_id, C = Date_and_time, D = Total_price\
   Lược đồ này có tập phụ thuộc hàm F = {f9, f10} trong đó:
   - f9 = A -> BCD
