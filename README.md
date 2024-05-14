@@ -54,7 +54,6 @@ trực tuyến khác. </li>
 
 ## 3.1. Mô hình thực thể - liên kết
 
-<!-- Chèn ảnh vào đây-->
 Danh sách thực thể:
 <ul>
   <li> Customer: Thông tin của khách hàng </li>
@@ -67,6 +66,7 @@ Danh sách thực thể:
 
 
 ## 3.2. Sơ đồ quan hệ 
+![Sơ đồ quan hệ](img/drawSQL-image-export-2024-05-14.png)
 
 <!-- Chèn ảnh vào đây -->
 
@@ -229,8 +229,21 @@ Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
 <h2 id="danh-sach-phu-thuoc-ham">5. Danh sách các phụ thuộc hàm</h2>
 
-- Xét quan hệ ...
-  Có các phụ thuộc hàm: ... 
-
-- Xét quan hệ ...
+- Xét lược đồ quan hệ Customer(Customer_id, Name, Email, Phone_number) \
+  Ký hiệu A = Customer_id, B = Name, C = Email, D = Phone_number \
+  Lược đồ này có tập phụ thuộc hàm F = {f1, f2} trong đó:
+  - f1 = A -> BCD
+  - f2 = B -> CD
+   
+- Xét lược đồ quan hệ Reservation(Reservation_id, Customer_id, Table_number, Time, Num_of_customer, Status) \
+  Ký hiệu A = Reservation_id, B = Customer_id, C = table_number, D = Time, E = Num_of_customer, F = Status \
+  Lược đồ này có tập phụ thuộc hàm F = {f1, f2} trong đó:
+  - f3 = A -> C
+  - f4 = B -> DEF
+ 
+- Xét lược đồ quan hệ Inventory(Customer_id, Name, Email, Phone_number) \
+  Ký hiệu A = Customer_id, B = Name, C = Email, D = Phone_number \
+  Lược đồ này có tập phụ thuộc hàm F = {f1, f2} trong đó:
+  - f1 = A -> BCD
+  - f2 = B -> CD
 
