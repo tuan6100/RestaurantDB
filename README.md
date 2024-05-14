@@ -237,13 +237,24 @@ Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
    
 - Xét lược đồ quan hệ Reservation(Reservation_id, Customer_id, Table_number, Time, Num_of_customer, Status) \
   Ký hiệu A = Reservation_id, B = Customer_id, C = table_number, D = Time, E = Num_of_customer, F = Status \
-  Lược đồ này có tập phụ thuộc hàm F = {f1, f2} trong đó:
+  Lược đồ này có tập phụ thuộc hàm F = {f3, f4} trong đó:
   - f3 = A -> C
   - f4 = B -> DEF
  
-- Xét lược đồ quan hệ Inventory(Customer_id, Name, Email, Phone_number) \
-  Ký hiệu A = Customer_id, B = Name, C = Email, D = Phone_number \
-  Lược đồ này có tập phụ thuộc hàm F = {f1, f2} trong đó:
-  - f1 = A -> BCD
-  - f2 = B -> CD
+- Xét lược đồ quan hệ Inventory(Ingredient_ID, Name, Description, Catelogy, Current_quantity, Expiration) \
+  Ký hiệu A = Ingredient_ID, B = Name, C = Description, D = Catelogy, E = Current_quantity, F = Expiration\
+  Lược đồ này có tập phụ thuộc hàm F = {f5, f6} trong đó:
+  - f5 = A -> BCDEF
+  - f6 = B -> CDEF
 
+- Xét lược đồ quan hệ Foof_and_Beverage(f&b_id, name, catelogy, price) \
+  Ký hiệu A = f&b_id, B = name, C = catelogy, D = price
+  Lược đồ này có tập phụ thuộc hàm F = {f7, f8} trong đó:
+  - f7 = A -> BCD
+  - f8 = B -> CD
+ 
+- Xét lược đồ quan hệ Bill(Bill_id, Reservation_id, Date_and_time, Total_price) \
+  Ký hiệu A = Bill_id, B = Reservation_id, C = Date_and_time, D = Total_price\
+  Lược đồ này có tập phụ thuộc hàm F = {f9, f10} trong đó:
+  - f9 = A -> BCD
+  - f10 = B -> D
