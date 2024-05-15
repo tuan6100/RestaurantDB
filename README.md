@@ -40,7 +40,7 @@ trực tuyến khác. </li>
 </ol>
 
 
-<h2 id="danh-sach-thanh-vien">2. Danh sách thành viên</h2>
+<h1 id="danh-sach-thanh-vien">2. Danh sách thành viên</h1>
 
 | STT | Họ tên | MSSV | 
 | :-------- | :------- | :----------|
@@ -50,7 +50,7 @@ trực tuyến khác. </li>
 | 4 | Nguễn Huy Hoàng | 20226107 |
 | 5 | Đỗ Gia Huy | 20226085 |
 
-<h2 id="xay-dung-mo-hinh-du-lieu">3. Xây dựng mô hình dữ liệu</h2>
+<h1 id="xay-dung-mo-hinh-du-lieu">3. Xây dựng mô hình dữ liệu</h1>
 
 ## 3.1. Mô hình thực thể - liên kết
 
@@ -70,7 +70,7 @@ Danh sách thực thể:
 
 <!-- Chèn ảnh vào đây -->
 
-<h2 id="danh-sach-cau-truy-van-sql-va-bieu-thuc-dsqh">4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH</h2>
+<h1 id="danh-sach-cau-truy-van-sql-va-bieu-thuc-dsqh">4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH</h1>
 
  1. Câu lệnh 1: 
 ```sql
@@ -227,7 +227,7 @@ Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 > Danh sách các câu truy vấn có ánh xạ lồng: 4, 5
 
 
-<h2 id="danh-sach-phu-thuoc-ham">5. Danh sách các phụ thuộc hàm</h2>
+<h1 id="danh-sach-phu-thuoc-ham">5. Danh sách các phụ thuộc hàm</h1>
 
 - Xét lược đồ quan hệ <span style="color:#ff00ff">Customer</span>(Customer_id, Name, Email, Phone_number) \
   Ký hiệu A = Customer_id, B = Name, C = Email, D = Phone_number \
