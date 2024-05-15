@@ -39,6 +39,7 @@ qua việc lưu trữ thông tin mua hang, hóa đơn điện tử và nhiều d
 trực tuyến khác. </li>
 </ol>
 
+Chi tiết xem tại: ![link](https://github.com/tuan6100/RestaurantDB)
 
 <h1 id="danh-sach-thanh-vien">2. Danh sách thành viên</h1>
 
@@ -53,6 +54,8 @@ trực tuyến khác. </li>
 <h1 id="xay-dung-mo-hinh-du-lieu">3. Xây dựng mô hình dữ liệu</h1>
 
 ## 3.1. Mô hình thực thể - liên kết
+
+![erd](438299734_319544691031935_7138416519740917392_n.png)
 
 Danh sách thực thể:
 <ul>
