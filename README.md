@@ -72,158 +72,236 @@ Danh sách thực thể:
 
 <h1 id="danh-sach-cau-truy-van-sql-va-bieu-thuc-dsqh">4. Danh sách các câu truy vấn SQL và biểu thức ĐSQH</h1>
 
- 1. Câu lệnh 1: 
+ 1. Truy xuất dữ liệu từ bảng công thức
+```sql
+SELECT * FROM "Recipe";
+```
+Biểu thức đại số quan hệ:  $$\pi_{fb-id, Ingredient-id, Quantity}(Recipe)$$
+
+ 2. Lấy tổng số lượng của mỗi nguyên liệu được sử dụng trong các công thức:
+```sql
+SELECT "Ingredient_id", SUM("Quantity") AS "Total_Quantity"
+FROM "Recipe"
+GROUP BY "Ingredient_id";
+```
+3. Lấy hóa đơn cùng với các đặt bàn tương ứng:
+```sql
+   SELECT *
+   FROM "Bill"
+   INNER JOIN "Reservation" ON "Bill"."Reservation_id" = "Reservation"."Reservation_id"
+WHERE Customer_id = 20011001;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{customer_id = 20011001}(bill ⋈ _{bill.reservation-id = reservation.reservation-id}reservation)$$
+
+4. Lấy các đặt bàn được thực hiện bởi một khách hàng cụ thể:
+```sql
+   SELECT *
+   FROM "Reservation"
+   WHERE "Customer_id" = 1000;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{customer_id=1000}(reservation)$$
+
+5. Lấy các mặt hàng trong kho sắp hết hạn:
+```sql
+   SELECT *
+   FROM "Inventory"
+   WHERE "Expiration_date" <= CURRENT_TIMESTAMP;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{Expiration_date<=CURRENT_TIMESTAMP}(Inventory)$$
+
+6. Lấy tổng giá của mỗi hóa đơn:
+```sql
+   SELECT "Bill_id", SUM("Total_price") AS "Total_Price"
+   FROM "Bill"
+   GROUP BY "Bill_id";
+```
+
+7. Lấy các đặt bàn có số lượng khách hàng cao nhất:
+```sql
+   SELECT *
+   FROM "Reservation"
+   WHERE "Num_of_customer" = (
+       SELECT MAX("Num_of_customer")
+       FROM "Reservation"
+   );
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+ 8. Lấy tên của các khách hàng đã đặt bàn:
+```sql
+   SELECT "Name"
+   FROM "Customer"
+   WHERE "Customer_id" IN (
+       SELECT DISTINCT "Customer_id"
+       FROM "Reservation"
+   );
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+9. Lấy giá trung bình của thức ăn và đồ uống: 
+```sql
+   SELECT AVG("Price") AS "Average_Price"
+   FROM "Food_and_Beverage";
+   
+```
+
+10. Lấy các đặt bàn có tổng giá cao nhất:
+```sql
+    SELECT *
+    FROM "Reservation"
+    WHERE "Reservation_id" = (
+        SELECT "Reservation_id"
+        FROM "Bill"
+        GROUP BY "Reservation_id"
+        ORDER BY SUM("Total_price") DESC
+        LIMIT 1
+    );
+```
+Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+
+11. Lấy tên và số lượng của các nguyên liệu được sử dụng trong một công thức cụ thể:
+```sql
+    SELECT "Inventory"."Name", "Recipe"."Quantity"
+    FROM "Recipe"
+    INNER JOIN "Inventory" ON "Recipe"."Ingredient_id" = "Inventory"."Ingredient_id"
+    WHERE "Recipe"."f&b_id" = <f&b_id>;
+```
+Biểu thức đại số quan hệ:  $$\pi_{Inventory.Name, Recipe.Quantity}(σ_{"Recipe.f&b_id" = <f&b_id>}(Recipe ⨝ Inventory))$$
+
+12. Lấy các đặt bàn có trạng thái "Confirmed":
+```sql
+    SELECT *
+    FROM "Reservation"
+    WHERE "Status" = 'Confirmed';
+```
+Biểu thức đại số quan hệ: $$\sigma_{"Status" = 'Confirmed'}(Reservation)$$
+
+13. Lấy tổng số khách hàng cho mỗi đặt bàn:
+```sql
+    SELECT "Reservation_id", COUNT("Customer_id") AS "Total_Customers"
+    FROM "Reservation"
+    GROUP BY "Reservation_id";
+```
+
+14. Lấy các đặt bàn được thực hiện bởi khách hàng có tên miền email cụ thể:
+```sql
+    SELECT *
+    FROM "Reservation"
+    WHERE "Customer_id" IN (
+        SELECT "Customer_id"
+        FROM "Customer"
+        WHERE "Email" LIKE '%@example.com'
+    );
+```
+
+15. Lấy các mặt hàng thức ăn và đồ uống có giá lớn hơn giá trung bình:
+```sql
+    SELECT *
+    FROM "Food_and_Beverage"
+    WHERE "Price" > (
+        SELECT AVG("Price")
+        FROM "Food_and_Beverage"
+    );
+```
+
+16. Lấy các đặt bàn có trạng thái "Confirmed" và có hơn 4 khách hàng:
+```sql
+    SELECT *
+    FROM "Reservation"
+    WHERE "Status" = 'Confirmed'
+    AND "Num_of_customer" > 4;
+```
+Biểu thức đại số quan hệ:  $$\sigma_{status = "Confirmed" AND num_of_customer > 4}(reservation)$$
+
+17. Lấy tên của các nguyên liệu thuộc danh mục "Dairy": 
 ```sql
 SELECT * FROM mytable WHERE x = y;
 ```
 Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
- 2. Câu lệnh 2: 
+18. Lấy các đặt bàn được thực hiện bởi khách hàng có số điện thoại bắt đầu bằng mã vùng cụ thể:
 ```sql
-SELECT * FROM mytable WHERE x = y;
+    SELECT "Name"
+    FROM "Inventory"
+    WHERE "Category" = 'Dairy';
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+Biểu thức đại số quan hệ:  $$\pi_{"Name"}(σ_{Category = 'Dairy'}(Inventory))$$
 
- 3. Câu lệnh 3: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+19. Lấy giá trung bình của số lượng nguyên liệu được sử dụng trong các công thức:
 
- 4. Câu lệnh 4: 
 ```sql
-SELECT * FROM mytable WHERE x = y;
+   SELECT AVG("Quantity") AS "Average_Quantity"
+    FROM "Recipe"
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
- 5. Câu lệnh 5: 
+20. Lấy các đặt bàn có ngày đặt sau ngày cụ thể:
 ```sql
-SELECT * FROM mytable WHERE x = y;
+    SELECT "Bill"."Bill_id", "Bill"."Total_price", "Reservation"."Status"
+    FROM "Bill"
+    INNER JOIN "Reservation" ON "Bill"."Reservation_id" = "Reservation"."Reservation_id";
+    
+    Relational Algebra: π("Bill.Bill_id", "Bill.Total_price", "Reservation.Status")(Bill ⨝ Reservation)
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+Biểu thức đại số quan hệ:  $$\pi_{Bill.Bill_id, Bill.Total_price, Reservation.Status}(Bill ⨝ Reservation)$$
 
- 6. Câu lệnh 6: 
+ 21. Truy xuất các mặt hàng thực phẩm, đồ uống có giá lớn hơn giá trung bình, được nhóm theo danh mục:
 ```sql
-SELECT * FROM mytable WHERE x = y;
+    SELECT "Category", COUNT(*) AS "Count"
+    FROM "Food_and_Beverage"
+    WHERE "Price" > (
+        SELECT AVG("Price")
+        FROM "Food_and_Beverage"
+    )
+    GROUP BY "Category";
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
- 7. Câu lệnh 7: 
+ 22. Truy xuất các đặt chỗ được thực hiện bởi khách hàng có cùng tên miền email với khách hàng khác:
 ```sql
-SELECT * FROM mytable WHERE x = y;
+    SELECT *
+    FROM "Reservation"
+    WHERE "Customer_id" IN (
+        SELECT DISTINCT "Customer_id"
+        FROM "Customer"
+        WHERE SUBSTRING("Email", POSITION('@' IN "Email") + 1) IN (
+            SELECT SUBSTRING("Email", POSITION('@' IN "Email") + 1)
+            FROM "Customer"
+            GROUP BY SUBSTRING("Email", POSITION('@' IN "Email") + 1)
+            HAVING COUNT(DISTINCT "Customer_id") > 1
+        )
+    );
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 8. Câu lệnh 8: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 9. Câu lệnh 9: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 10. Câu lệnh 10: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 11. Câu lệnh 11: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 12. Câu lệnh 12: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 13. Câu lệnh 13: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 14. Câu lệnh 14: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 15. Câu lệnh 15: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 16. Câu lệnh 16: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 17. Câu lệnh 17: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 18. Câu lệnh 18: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 19. Câu lệnh 19: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 20. Câu lệnh 20: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 21. Câu lệnh 21: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
-
- 22. Câu lệnh 22: 
-```sql
-SELECT * FROM mytable WHERE x = y;
-```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
  23. Câu lệnh 23: 
 ```sql
-SELECT * FROM mytable WHERE x = y;
+    SELECT "Name"
+    FROM "Inventory"
+    WHERE "Category" <> 'Vegetables';
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
+Biểu thức đại số quan hệ:  $$\pi_{Name}(σ_{"Category" <> 'Vegetables'}(Inventory))$$
 
  24. Câu lệnh 24: 
 ```sql
-SELECT * FROM mytable WHERE x = y;
+    SELECT *
+    FROM "Reservation"
+    WHERE "Customer_id" IN (
+        SELECT DISTINCT "Customer_id"
+        FROM "Bill"
+        WHERE "Total_price" > 1000
+    );
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
- 25. Câu lệnh 25: 
+ 25. Tìm top 10 khách có lượt đặt bàn nhiều nhất năm 2023:
 ```sql
-SELECT * FROM mytable WHERE x = y;
+SELECT "Customer_id", COUNT("Reservation_id") AS "Total_Reservations"
+FROM "Reservation"
+WHERE EXTRACT(YEAR FROM "Reservation_date") = 2023
+GROUP BY "Customer_id"
+ORDER BY "Total_Reservations" DESC
+LIMIT 10;
 ```
-Biểu thức đại số quan hệ:  $$\sigma_{x = y}(mytable)$$
 
 > [!Note]  
-> Danh sách các câu truy vấn có mệnh đề <span style="color:#4da6ff">GROUP BY</span>: 1, 2, 3  
+> Danh sách các câu truy vấn có mệnh đề <span style="color:#4da6ff">GROUP BY</span>: 2, 6, 10, 13, 21, 22
 > Danh sách các câu truy vấn có ánh xạ lồng: 4, 5
 
 
