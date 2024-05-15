@@ -55,7 +55,7 @@ Chi tiết xem tại: ![link](https://github.com/tuan6100/RestaurantDB)
 
 ## 3.1. Mô hình thực thể - liên kết
 
-![erd](438299734_319544691031935_7138416519740917392_n.png)
+![erd](img/438299734_319544691031935_7138416519740917392_n.png)
 
 Danh sách thực thể:
 <ul>
