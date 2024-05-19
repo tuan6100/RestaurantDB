@@ -55,7 +55,7 @@ Chi tiết xem tại: [link](https://github.com/tuan6100/RestaurantDB)
 
 ## 3.1. Mô hình thực thể - liên kết
 
-![erd]([img/438299734_319544691031935_7138416519740917392_n.png](https://raw.githubusercontent.com/tuan6100/RestaurantDB/main/img/438299734_319544691031935_7138416519740917392_n.png))
+![erd](https://raw.githubusercontent.com/tuan6100/RestaurantDB/main/img/438299734_319544691031935_7138416519740917392_n.png)
 
 Danh sách thực thể:
 <ul>
@@ -69,7 +69,7 @@ Danh sách thực thể:
 
 
 ## 3.2. Sơ đồ quan hệ 
-![Sơ đồ quan hệ]([img/drawSQL-image-export-2024-05-14.png](https://raw.githubusercontent.com/tuan6100/RestaurantDB/main/img/drawSQL-image-export-2024-05-14.png))
+![Sơ đồ quan hệ](https://raw.githubusercontent.com/tuan6100/RestaurantDB/main/img/drawSQL-image-export-2024-05-14.png)
 
 <!-- Chèn ảnh vào đây -->
 
